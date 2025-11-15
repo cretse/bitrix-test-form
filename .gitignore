@@ -1,0 +1,34 @@
+# Игнорируем ядро и компоненты Bitrix
+/bitrix/*
+# ...но делаем исключение для важных файлов, если они кастомизированы
+# В современной разработке все должно быть в /local/, поэтому эти строки для подстраховки
+!/bitrix/.settings.php
+!/bitrix/php_interface/
+!/bitrix/templates/
+
+# Игнорируем пользовательский контент
+/upload/
+
+# Игнорируем временные файлы и кэш
+/bitrix/cache/
+/bitrix/managed_cache/
+/bitrix/stack_cache/
+
+# Файлы IDE и системный мусор
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Логи и резервные копии
+*.log
+*.sql
+*.zip
+*.gz
+*.tar
+
+# Файлы установки Bitrix
+/bitrixsetup.php
+/restore.php
